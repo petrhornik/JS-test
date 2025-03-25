@@ -11,26 +11,29 @@ function lowercaseWord(stringInput, wordIndex) {
 // 0-64 -> F, 65-78 -> E, 79-86 -> D, 87-92 -> C, 93-98 -> B, 99-100 -> A, pokud je testScore mimo rozsah 0-100, nebo nevalidní hodnota funkce vrátí "INVALID SCORE"
 // například pro 75 bude výsledek "E"
 function transformScoreToGrade(testScore) {
-  if (testScore >= 0 && testScore <= 64) { //pokud je testScore v rozmezí 0-64
-    return "F";
+  switch(testScore) {
+    case testScore >= 0 && testScore <= 64:
+      return "F";
+      break;
+    case testScore >= 65 && testScore <= 78:
+      return "E";
+      break;
+    case testScore >= 79 && testScore <= 86:
+      return "D";
+      break;
+    case testScore >= 87 && testScore <= 92:
+      return "C";
+      break;
+    case testScore >= 93 && testScore <= 98:
+      return "B";
+      break;
+    case testScore >= 99 && testScore <= 100:
+      return "A";
+      break;
+    default:
+      return "INVALID SCORE";
+      break
   }
-  if (testScore >= 65 && testScore <= 78) { //pokud je testScore v rozmezí 65-78
-    return "E";
-  }
-  if (testScore >= 79 && testScore <= 86) { //pokud je testScore v rozmezí 79-86
-    return "D";
-  }
-  if (testScore >= 87 && testScore <= 92) { //pokud je testScore v rozmezí 79-86
-    return "D";
-  }
-  if (testScore >= 93 && testScore <=98) { //pokud je testScore v rozmezí 79-86
-    return "B";
-  }
-  if (testScore >= 99 && testScore <= 100) { //pokud je testScore v rozmezí 79-86
-        return "A";
-}
-else{
-  return "INVALID SCORE";
 }
 
 // 3) Funkce na výpočet factorialu, pomocí cyklu, vstupem je factorialNumber, výstupem bude výsledek faktoriálu
