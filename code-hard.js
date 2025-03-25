@@ -9,6 +9,8 @@ function processArrayItems(arrayInput, minLength, maxLength, symbolToFill) {}
 // oblast volání funkcí
 const fruits = ["apple", "banana", "kiwi", "orange", "strawberry"];
 
+function
+
 // 1)
 const result1 = processArrayItems(fruits, 5, 6);
 console.log(result1);

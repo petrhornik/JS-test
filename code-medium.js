@@ -12,22 +12,22 @@ function lowercaseWord(stringInput, wordIndex) {
 // například pro 75 bude výsledek "E"
 function transformScoreToGrade(testScore) {
   switch(testScore) {
-    case 0-64:
+    case testScore >= 0 && testScore <= 64:
       return "F";
       break;
-    case 65-78:
+    case testScore >= 65 && testScore <= 78:
       return "E";
       break;
-    case 79-86:
+    case testScore >= 79 && testScore <= 86:
       return "D";
       break;
-    case 87-92:
+    case testScore >= 87 && testScore <= 92:
       return "C";
       break;
-    case 93-98:
+    case testScore >= 93 && testScore <= 98:
       return "B";
       break;
-    case 99-100:
+    case testScore >= 99 && testScore <= 100:
       return "A";
       break;
     default:
